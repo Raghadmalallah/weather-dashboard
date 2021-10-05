@@ -3,7 +3,10 @@
     text-align: center;
     }
 
-
+    .forecast{
+    
+        font-size: 0.9em;
+    }
 
 li:hover{
     background-color: #FEC110;
