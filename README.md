@@ -2,12 +2,12 @@
 
 ## Description
 
-For a traveler user and those who check the weather chanel before planing to go out, i bulid an aplictaion that will help them finding the weather condtion for a mulitaple cities using the api's for the OpenWeather [https://openweathermap.org/](https://openweathermap.org/) to get the accuret weather in the time that the user is logging in.
+For a traveler user and those who check the weather channel before planning to go out, I bulid an application that will help them find the weather condition for multiple cities using the API's for the OpenWeather [https://openweathermap.org/](https://openweathermap.org/) to get the accurate weather in the time that the user is logging in.
 
 
 ## Installation
 
-I started analyzing the structure of the HTML and with the Javascript, using the bootstrap, jquery, cloudflare and simple css to finlize the final design that is user friendly and colore attraction to make it look more modren and fun.
+I started analyzing the structure of the HTML and with the Javascript, using the bootstrap, jquery, Cloudflare, and simple CSS to finalize the final design that is user-friendly and color attraction to make it look more modern and fun.
 
 ## Usage
 
