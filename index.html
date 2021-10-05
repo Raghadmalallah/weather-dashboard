@@ -2,78 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather Dashboard</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Weather Dashboard</title>
 </head>
 <body>
-    <body>
-        <nav class="navbar bg-warning text-dark">
-            <span class="navbar-brand mb-0 h1 w-100 text-center">Weather Dashboard</span>
-        </nav>
-        <div class="container">
-            <div class="row">
-                <div class="col-4 bg-light">
-                    <p class="search-header my-1">Search for a city</p>
-                    <div class="input-group mb-3">
-                        <input id="city-input" type="text" class="form-control" placeholder="Enter city name" aria-label="Enter city name">
-                        <div class="input-group-append">
-                            <button class="btn bg-warning text-dark" type="button" id="search-button">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <button class="btn bg-warning text-dark mb-3" type="button" id="clear-history">Clear history</button>
-                    <form id="history"></form>
-                </div>
-                <div class="col-8">
-                    <div class="row mr-0">
-                        <div class="col-12 border m-3 rounded">
-                            <div class="row">
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <p id="temperature"></p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <p id="humidity"></p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <p id="wind-speed"></p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 d-flex">
-                                    <p id="UV-index"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <h3>5-Day Forecast</h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col forecast bg-warning text-dark ml-3 mb-3 rounded"></div>
-                        <div class="col forecast bg-warning text-dark ml-3 mb-3 rounded"></div>
-                        <div class="col forecast bg-warning text-dark ml-3 mb-3 rounded"></div>
-                        <div class="col forecast bg-warning text-dark ml-3 mb-3 rounded"></div>
-                        <div class="col forecast bg-warning text-dark ml-3 mb-3 rounded"></div>
+    <nav class="navbar bg-warning text-dark">
+        <span class="navbar-brand mb-0 h1 w-100 text-center">Weather Dashboard</span>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 bg-light">
+                <p class="search-header my-1">Search for a city</p>
+                <div class="input-group mb-3">
+                    <input id="city-input" type="text" class="form-control" placeholder="Enter city name" aria-label="Enter city name">
+                    <div class="input-group-append">
+                        <button class=" btn bg-warning text-dark" id="search-button">
+                            <i class="fa fa-search"></i></button>
                     </div>
                 </div>
+             <button class="btn bg-warning text-dark" type="button" id="clear-history">Clear history</button>
+                <ul class="list-group">
+
+                </ul>
+            </div>   
+            <div class="col-sm-8">
+                <div class="row ml-2 border border-dark rounded">
+                    <div class="col-sm-12" id="current-weather">
+                        <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
+                        <p>Temperature:<span class="current" id="temperature"></span></p>
+                        <p>Humidity:<span class="current" id="humidity"></span></p> 
+                        <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
+                        <p>UV index:<span class="current bg-warning text-dark rounded py-2 px-2 text-white" id="uv-index"></span></p> 
+                    </div>
+                </div>
+                <div class="col-sm-12" id ="future-weather">
+                <p class="forcast-header my-1">5-Day Forecast</p>
+                <div class="row text-light">
+                        <div class="col-sm-2 forecast bg-warning text-dark ml-2 mb-3 p-2 mt-2 rounded" >
+                            <p id="fDate0"></p>
+                            <p id="fImg0"></p>
+                            <p>Temp:<span id="fTemp0"></span></p>
+                            <p>Humidity:<span id="fHumidity0"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-warning text-dark forecast ml-2 mb-3 p-2 mt-2 rounded" >
+                            <p id="fDate1"></p>
+                            <p id="fImg1"></p>
+                            <p>Temp:<span id="fTemp1"></span></p>
+                            <p>Humidity:<span id="fHumidity1"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-warning text-dark forecast ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate2"></p>
+                            <p id="fImg2"></p>
+                            <p>Temp:<span id="fTemp2"></span></p>
+                            <p>Humidity:<span id="fHumidity2"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-warning text-dark forecast  ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate3"></p>
+                            <p id="fImg3"></p>
+                            <p>Temp:<span id="fTemp3"></span></p>
+                            <p>Humidity:<span id="fHumidity3"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-warning text-dark forecast ml-2 mb-3 p-2 mt-2 rounded" >
+                            <p id="fDate4"></p>
+                            <p id="fImg4"></p>
+                            <p>Temp:<span id="fTemp4"></span></p>
+                            <p>Humidity:<span id="fHumidity4"></span></p>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
-    
-                    <!-- the script file -->
+    </div>
+		
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

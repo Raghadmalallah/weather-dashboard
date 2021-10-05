@@ -2,9 +2,14 @@
     padding-top: 20px;
     text-align: center;
     }
-.col-4{
-        height: 150px;
-        padding-top: 10px;
-    }
 
-    bg-warning text-dark
+
+
+li:hover{
+    background-color: #FEC110;
+    color: white;
+    text-decoration: underline;
+}
+.btn {
+    margin: 10px;
+}
