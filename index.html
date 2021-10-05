@@ -11,30 +11,69 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <nav class="navbar bg-warning text-dark">
-        <span class="navbar-brand mb-0 h1 w-100 text-center">Weather Dashboard</span>
-    </nav>
-    <div class="container ">
-        <div class="row">
-            <div class="col-4 bg-light ">
-                <p class="search-header my-1">Search for a city</p>
-                <div class="input-group mb-3">
-                    <input id="city-input" type="text" class="form-control" placeholder="Enter city name" aria-label="Enter city name">
-                    <div class="input-group-append">
-                        <button class="btn bg-warning text-dark" type="button" id="search-button">
-                            <i class="fas fa-search"></i>
-                        </button>
+    <body>
+        <nav class="navbar bg-warning text-dark">
+            <span class="navbar-brand mb-0 h1 w-100 text-center">Weather Dashboard</span>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-4 bg-light">
+                    <p class="search-header my-1">Search for a city</p>
+                    <div class="input-group mb-3">
+                        <input id="city-input" type="text" class="form-control" placeholder="Enter city name" aria-label="Enter city name">
+                        <div class="input-group-append">
+                            <button class="btn bg-warning text-dark" type="button" id="search-button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="btn bg-warning text-dark mb-3" type="button" id="clear-history">Clear history</button>
+                    <form id="history"></form>
+                </div>
+                <div class="col-8">
+                    <div class="row mr-0">
+                        <div class="col-12 border m-3 rounded">
+                            <div class="row">
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p id="temperature"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p id="humidity"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p id="wind-speed"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 d-flex">
+                                    <p id="UV-index"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>5-Day Forecast</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col forecast bg-warning text-dark ml-3 mb-3 rounded"></div>
+                        <div class="col forecast bg-warning text-dark ml-3 mb-3 rounded"></div>
+                        <div class="col forecast bg-warning text-dark ml-3 mb-3 rounded"></div>
+                        <div class="col forecast bg-warning text-dark ml-3 mb-3 rounded"></div>
+                        <div class="col forecast bg-warning text-dark ml-3 mb-3 rounded"></div>
                     </div>
                 </div>
-                <button type="button" class="btn btn-warning ">Clear History</button>
-                          </div>
-                           
-                
-                
             </div>
         </div>
-    </div>
-    <!-- the script file -->
+    
+                    <!-- the script file -->
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
